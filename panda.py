@@ -15,7 +15,7 @@ def serve_pictures(picture):
     return static_file(picture, root='/opt/python_panda/')
 
 def read_file():
-    return pd.read_csv("/opt/python_panda/USDJPY.csv")
+    return pd.read_csv("USDJPY.csv")
     
 def get_redundant_pairs(df):
     '''Get diagonal and lower triangular pairs of correlation matrix'''
@@ -91,4 +91,4 @@ def chart():
     return serve_pictures("image6.png")
 
 if __name__ == "__main__":
-    daemon_run(host='0.0.0.0', port=92)
+    run(host='0.0.0.0', port=92)
